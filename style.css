@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Change this to your desired background color */
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's on top of other content */
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: #fff; /* Change this to your desired text color */
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .toggle-button {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-menu li {
+    margin-left: 20px;
+  }
+  
+  .navbar-menu li a {
+    color: #fff; /* Change this to your desired link color */
+    text-decoration: none;
+  }
+  
+  /* Transparent faded black glass-like texture for the toggle menu background */
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
+    backdrop-filter: blur(10px); /* Glass-like texture */
+    opacity: 0; /* Hide the menu by default */
+    pointer-events: none; /* Disable mouse interaction by default */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Show the menu when the toggle button is clicked */
+  .navbar-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Hover effect for the menu items */
+  .navbar-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Change this to your desired hover color */
+  }
+  
+  /* Media query for mobile responsiveness */
+  @media screen and (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+    }
+  
+    .navbar-menu {
+      flex-direction: column;
+      position: static;
+      opacity: 1;
+      pointer-events: auto;
+      background-color: transparent;
+      backdrop-filter: none;
+    }
+  
+    .navbar-menu li {
+      margin-left: 0;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+  
